@@ -1,12 +1,12 @@
 # Sistema de Control de Péndulo Dual
 
-## Descripción
+Descripción
 
 Este proyecto implementa un sistema distribuido para el control de un péndulo dual utilizando un ESP32 como controlador principal y una aplicación de visión por computadora desarrollada en C++ con OpenCV. Ambos módulos se comunican mediante el protocolo UDP para transmitir en tiempo real el ángulo detectado por el sistema de visión hacia el controlador.
 
-## Componentes del proyecto
+Componentes del proyecto
 
-### ESP32_Controller
+ESP32_Controller
 - Control PID.
 - Comunicación Wi-Fi mediante UDP.
 - Lectura del sensor ADC.
@@ -14,13 +14,13 @@ Este proyecto implementa un sistema distribuido para el control de un péndulo d
 - Modo seguro (Watchdog).
 - Telemetría mediante FreeRTOS.
 
-### Vision_PC
+Vision_PC
 - Captura de video desde una cámara IP.
 - Detección de marcadores ArUco.
 - Cálculo del ángulo de inclinación.
 - Envío del Set Point al ESP32 mediante UDP.
 
-## Tecnologías utilizadas
+Tecnologías utilizadas
 
 - ESP32
 - ESP-IDF
@@ -30,7 +30,7 @@ Este proyecto implementa un sistema distribuido para el control de un péndulo d
 - OpenCV
 - UDP Sockets
 
-## Conclusión
+Conclusión
 
 Se desarrolló un sistema de control distribuido que integra una aplicación de visión por computadora con un controlador embebido basado en ESP32. La aplicación desarrollada en C++ permite detectar la inclinación de la estructura mediante marcadores ArUco y transmitir el ángulo calculado al controlador utilizando comunicación UDP. Por su parte, el ESP32 procesa esta información mediante un controlador PID ejecutado sobre FreeRTOS para generar las señales PWM necesarias para el accionamiento de los motores brushless.
 
